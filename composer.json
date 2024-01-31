@@ -1,5 +1,5 @@
 {
-    "name": "amirreza/omnipay-azki-vam",
+    "name": "inverseschool/omnipay-azkivam",
     "type": "library",
     "license": "MIT",
     "autoload": {
