@@ -1,6 +1,6 @@
 ## Instalation
 
-    composer require amirreza/omnipay-azki-vam
+    composer require inverseschool/omnipay-azkivam
 
 ## Example
 
