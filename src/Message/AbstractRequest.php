@@ -92,7 +92,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     /**
      * @return string
      */
-    public function getEndpoint(): string
+    public function getBaseUrl(): string
     {
         if ($this->getTestMode()) {
             throw new \InvalidArgumentException('Azkivam payment gateway does not support test mode.');
@@ -102,7 +102,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
     public function createPlainSignature(): string
     {
-        return $this->getSubUrl() . '#' . time() . '#' . $this->getHttpMethod() . '#' . $this->getApiKey();
+        return $this->endPoint . '#' . time() . '#' . $this->getHttpMethod() . '#' . $this->getApiKey();
     }
 
     public function createSignature(): string
@@ -170,7 +170,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             }
             $httpResponse = $this->httpClient->request(
                 $this->getHttpMethod(),
-                $this->createUri($this->getEndpoint()),
+                $this->createUri($this->getBaseUrl()),
                 [
                     'Accept' => '*/*',
                     'Content-type' => 'application/json',
