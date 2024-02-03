@@ -19,11 +19,13 @@ use Omnipay\Common\Message\ResponseInterface;
 abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 {
     /**
-     * Live Endpoint URL
+     * Live BaseUrl
      *
      * @var string URL
      */
     protected $baseUrl = 'https://api.azkiloan.com';
+
+    protected $endPoint;
 
     /**
      * @return string
