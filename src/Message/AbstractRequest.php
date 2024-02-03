@@ -33,10 +33,10 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     abstract protected function getHttpMethod();
 
     /**
-     * @param string $endpoint
+     * @param string $baseUrl
      * @return string
      */
-    abstract protected function createUri(string $endpoint);
+    abstract protected function createUri(string $baseUrl);
 
     /**
      * @param array $data
