@@ -5,14 +5,15 @@ namespace Omnipay\AzkiVam\Message;
 class ReverseTicketRequest extends AbstractRequest
 {
 
+    protected $endPoint = '/payment/reverse';
     protected function getHttpMethod()
     {
         return 'POST';
     }
 
-    protected function createUri(string $endpoint)
+    protected function createUri(string $baseUrl)
     {
-        return $endpoint . '/payment/reverse';
+        return $baseUrl . $this->endPoint;
     }
 
     protected function createResponse(array $data)
