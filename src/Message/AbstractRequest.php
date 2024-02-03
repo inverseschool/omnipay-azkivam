@@ -23,7 +23,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      *
      * @var string URL
      */
-    protected $liveEndpoint = 'https://api.azkiloan.com';
+    protected $baseUrl = 'https://api.azkiloan.com';
 
     /**
      * @return string
@@ -95,7 +95,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         if ($this->getTestMode()) {
             throw new \InvalidArgumentException('Azkivam payment gateway does not support test mode.');
         }
-        return $this->liveEndpoint;
+        return $this->baseUrl;
     }
 
     public function createPlainSignature(): string
