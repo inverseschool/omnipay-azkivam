@@ -135,16 +135,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         return $this->setParameter('redirectUrl', $redirectUrl);
     }
-
-    public function getSubUrl(): string
-    {
-        return $this->getParameter('subUrl');
-    }
-
-    public function setSubUrl(string $subUrl): self
-    {
-        return $this->setParameter('subUrl', $subUrl);
-    }
+    
 
     public function createProviderId(): int
     {
