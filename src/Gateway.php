@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Omnipay\AzkiVam;
+namespace Omnipay\Azkivam;
 
 use Omnipay\AzkiVam\Message\CancelTicketRequest;
 use Omnipay\AzkiVam\Message\CreateTicketRequest;
