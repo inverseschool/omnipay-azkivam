@@ -23,7 +23,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      *
      * @var string URL
      */
-    protected $baseUrl = 'https://api.azkiloan.com';
+    protected $baseUrl = 'https://api.azkivam.com';
 
     protected $endPoint;
 
