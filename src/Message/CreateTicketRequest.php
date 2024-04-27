@@ -51,7 +51,7 @@ class CreateTicketRequest extends AbstractRequest
     {
         return [
             "amount" => $this->getAmount(),
-            "redirect_uri" => $this->getRedirectUrl(),
+            "redirect_uri" => $this->getReturnUrl(),
             "fallback_uri" =>  $this->getFallBackUrl(),
             "provider_id" => $this->createProviderId(),
             "mobile_number" => $this->getCustomerPhone(),
