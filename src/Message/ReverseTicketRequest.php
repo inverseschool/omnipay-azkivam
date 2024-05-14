@@ -24,7 +24,7 @@ class ReverseTicketRequest extends AbstractRequest
     public function getData()
     {
         return [
-            'ticket_id' => $this->getTicketId(),
+            'ticket_id' => $this->getTransactionReference(),
             'provider_id' => $this->createProviderId()
         ];
     }

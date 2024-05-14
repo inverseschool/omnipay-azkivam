@@ -116,16 +116,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return bin2hex($encrypted);
     }
 
-    public function getTicketId(): string
-    {
-        return $this->getParameter('ticketId');
-    }
-
-    public function setTicketId(string $ticketId): self
-    {
-        return $this->setParameter('ticketId', $ticketId);
-    }
-
     public function getRedirectUrl(): string
     {
         return $this->getParameter('redirectUrl');

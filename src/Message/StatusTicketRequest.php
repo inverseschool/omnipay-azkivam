@@ -26,7 +26,7 @@ class StatusTicketRequest extends AbstractRequest
         $this->validate('ticketId');
 
         return [
-            'ticket_id' => $this->getTicketId()
+            'ticket_id' => $this->getTransactionReference()
         ];
     }
 }
